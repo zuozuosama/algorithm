@@ -1,0 +1,27 @@
+!.gitignore
+.catalina.home_IS_UNDEFINED
+.target/
+.target/*
+.work/
+.work/*
+.classpath
+.project
+.settings/
+target/
+bin/
+gen/
+logs/
+logs/*
+.factorypath
+src/test
+src/test/*
+src/main/resources/generator
+src/main/resources/generator/*
+# Created by OS.
+.DS_Store
+/.springBeans
+*.json
+.idea/
+.idea/*
+*.iml
+
