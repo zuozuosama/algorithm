@@ -37,11 +37,14 @@ public class MinWindow {
         return ans;
     }
 
+    //test
     public static void main(String[] args) {
         MinWindow mw = new MinWindow();
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine(); // ADOBECODEBANC
         String t = sc.nextLine(); // ABC
         System.out.println(mw.minWindow(s,t));
+
+
     }
 }
