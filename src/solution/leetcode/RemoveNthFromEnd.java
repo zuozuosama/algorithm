@@ -1,6 +1,7 @@
 package solution.leetcode;
 
 /**
+ * 快慢指针
  * 给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
  * 示例：
  * 给定一个链表: 1->2->3->4->5, 和 n = 2.
@@ -49,7 +50,7 @@ public class RemoveNthFromEnd {
     }
 
     /**
-     * 双指针一次遍历删除节点
+     * 双指针一次遍历删除节点（快慢指针）
      *
      * @param head
      * @param n
