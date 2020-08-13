@@ -25,11 +25,14 @@ public class RemoveNthFromEnd {
         }
         System.out.println();
         RemoveNthFromEnd remove = new RemoveNthFromEnd();
-        ListNode node = remove.removeNthFromEnd(head, 2);
-        while (node != null) {
-            System.out.print(node.val + "->");
-            node = node.next;
-        }
+//        ListNode node = remove.removeNthFromEnd(head, 2);
+//        while (node != null) {
+//            System.out.print(node.val + "->");
+//            node = node.next;
+//        }
+
+        ListNode nthFromEnd = remove.findNthFromEnd(head, 2);
+        System.out.println(nthFromEnd.val);
     }
 
     /**
@@ -72,6 +75,30 @@ public class RemoveNthFromEnd {
         }
         second.next = second.next.next;
         return dummy.next;
+    }
+
+    /**
+     * 找到链表倒数第n个值
+     *
+     * @param head
+     * @param n
+     * @return
+     */
+    public ListNode findNthFromEnd(ListNode head, int n) {
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode fast = dummy;
+        ListNode slow = dummy;
+        // Advances fast pointer so that the gap between fast and slow is n nodes apart
+        for (int i = 1; i <= n; i++) {
+            fast = fast.next;
+        }
+        // Move fast to the end, maintaining the gap
+        while (fast != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+        return slow;
     }
 
     /**
