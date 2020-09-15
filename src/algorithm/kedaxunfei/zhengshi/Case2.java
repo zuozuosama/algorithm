@@ -1,11 +1,10 @@
-package oldAlgorithm.Algorithms;
+package algorithm.kedaxunfei.zhengshi;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
-/*
-    归并排序
- */
-public class MergeSort {
+public class Case2 {
+
+
     private static int[] sort(int[] a, int low, int high) {
         int mid = (low + high) / 2;
         if (low < high) {
@@ -45,9 +44,22 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-
-        int[] arr = {21,25,84,47,15,27,68,35,20};
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i]=sc.nextInt();
+        }
+//        int[] arr = {21, 25, 84, 47, 15, 27, 68, 35, 20};
         sort(arr, 0, arr.length - 1);
-        System.out.println(Arrays.toString(arr));
+        print(arr);
     }
+
+    private static void print(int[] d){
+        for (int i = 0; i < d.length; i++) {
+            if (i==d.length-1) System.out.println(d[i]);
+            else System.out.print(d[i]+" ");
+        }
+    }
+
 }
