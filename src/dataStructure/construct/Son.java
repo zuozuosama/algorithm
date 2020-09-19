@@ -1,8 +1,15 @@
 package dataStructure.construct;
 
 public class Son extends Father{
+    public int a = 1;
 
-    private int a;
+    public void method(){
+        System.out.println("子类方法");
+    }
+
+    public void method1(){
+        System.out.println("子类方法");
+    }
 
     static {
         System.out.println("子静态代码块");            //2
