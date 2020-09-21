@@ -1,7 +1,11 @@
 package algorithm.dahua;
 
+/**
+ * 五猴子粉桃问题 java经典四十题
+ */
 public class Case1 {
 
+    //非递归方式
     public static int part() {
         int lastPart = 1; //最后那只猴子拿到的那份桃子数，
         int onePart = 0; //通过最后那份桃子推理出第一份的桃子数，

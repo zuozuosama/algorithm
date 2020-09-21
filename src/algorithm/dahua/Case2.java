@@ -12,6 +12,12 @@ public class Case2 {
         System.out.println(m);
     }
 
+    /**
+     * 递归方式
+     * @param n  初始香蕉数量
+     * @param k  第几次分
+     * @return
+     */
     public static int part(int n, int k) {
         if ((n % 5 == 1) && k <= 5) {
             if (k == 5) {
