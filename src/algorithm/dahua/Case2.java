@@ -1,4 +1,4 @@
-package dahua;
+package algorithm.dahua;
 
 /**
  * 一堆香蕉，分成五份剩一个，第一个人吃掉剩下那个，拿走一份。。。5个人最少需要多少个香蕉
@@ -26,6 +26,8 @@ public class Case2 {
             return part(m, 1);
         }
     }
+
+
 
 
 }
