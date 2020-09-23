@@ -1,6 +1,7 @@
 package algorithm.singleTon;
 
 /**
+ * 懒汉式
  * 静态内部类实现模式（线程安全，调用效率高，可以延时加载）
  */
 public class SingleTonDemo4 {
