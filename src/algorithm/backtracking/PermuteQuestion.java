@@ -27,4 +27,10 @@ public class PermuteQuestion {
             track.removeLast();
         }
     }
+
+    public static void main(String[] args) {
+        PermuteQuestion permuteQuestion = new PermuteQuestion();
+        int[] a = {1,2,3};
+        permuteQuestion.permute(a);
+    }
 }
