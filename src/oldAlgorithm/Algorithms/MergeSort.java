@@ -18,6 +18,7 @@ public class MergeSort {
     }
 
     private static void merge(int[] a, int low, int mid, int high) {
+        //创建一个临时排序数组
         int[] temp = new int[high - low + 1];
         int i = low; //左游标
         int j = mid + 1; //右游标
@@ -38,7 +39,11 @@ public class MergeSort {
         while (j <= high) {
             temp[k++] = a[j++];
         }
-        // 把新数组中的数覆盖nums数组
+        // 把新数组中的数覆盖a数组
+        /**
+         * 因为递归过程中low可能不为0，不为0的原因是可能对low=3,mid=3,high=4即
+         * a[3]-a[4]范围的子数组进行排序
+         */
         for (int x = 0; x < temp.length; x++) {
             a[x + low] = temp[x];
         }
