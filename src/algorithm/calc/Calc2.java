@@ -3,7 +3,7 @@ package algorithm.calc;
 import java.util.Stack;
 
 /**
- * 处理乘除法和空格
+ * 处理乘除法和空格以及括号
  */
 public class Calc2 {
     private static int i = 0;
@@ -39,13 +39,11 @@ public class Calc2 {
                         break;
                     // 只要拿出前一个数字做对应运算即可
                     case '*':
-                        pre = stk.peek();
-                        stk.pop();
+                        pre = stk.pop();
                         stk.push(pre * num);
                         break;
                     case '/':
-                        pre = stk.peek();
-                        stk.pop();
+                        pre = stk.pop();
                         stk.push(pre / num);
                         break;
                 }
