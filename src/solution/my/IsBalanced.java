@@ -13,8 +13,8 @@ package solution.my;
  * 3
  * / \
  * 9  20
- * /  \
- * 15   7
+ *   /  \
+ *  15   7
  * 返回 true 。
  */
 public class IsBalanced {
