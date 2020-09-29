@@ -1,4 +1,4 @@
-package algorithm;
+package leetcode;
 
 /**
  * 快慢指针
