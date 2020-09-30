@@ -56,7 +56,7 @@ public class RemoveNthFromEnd {
      * @param n
      * @return
      */
-    public ListNode removeNthFromEnd(ListNode head, int n) {
+    public ListNode removeNthFromEnd1(ListNode head, int n) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode first = dummy;
@@ -74,30 +74,23 @@ public class RemoveNthFromEnd {
         return dummy.next;
     }
 
-    /**
-     * 两次遍历删除节点
-     *
-     * @param head
-     * @param n
-     * @return
-     */
-    public ListNode removeNthFromEnd1(ListNode head, int n) {
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        int length = 0;
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        if (head == null || head.next == null) return null;
         ListNode first = head;
-        while (first != null) {
-            length++;
+        ListNode second = head;
+        for (int i = 0; i < n; i++) {
             first = first.next;
         }
-        length -= n;
-        first = dummy;
-        while (length > 0) {
-            length--;
+
+        if (first == null) return head.next;
+
+        while (first.next != null) {
             first = first.next;
+            second = second.next;
         }
-        first.next = first.next.next;
-        return dummy.next;
+        second.next = second.next.next;
+        return head;
     }
+
 
 }
