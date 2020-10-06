@@ -4,6 +4,8 @@ import dataStructure.linkedNode.ListNode;
 
 /**
  * 反转链表
+ * 1->2->3->4
+ * 反转为4->3->2->1
  */
 public class JianZhiOffer24 {
     public ListNode reverseList(ListNode head) {
