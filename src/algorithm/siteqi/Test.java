@@ -28,7 +28,7 @@ public class Test {
         return number.toString();
     }
 
-    //private 可以修饰类
+    //private 可以修饰类 double不可以在switch语句中
     private class inner{
         public  void main(String[] args) {
             switch ('1'){
