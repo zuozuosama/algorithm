@@ -18,9 +18,11 @@ public class Y {
         X x = new X();
         x.print();
 
-        Integer a = new Integer(1000);
-        Integer c = 1000;
-        int b = 1000;
+        Integer a = new Integer(10);
+        Integer c = -128;
+        Integer d = -128;
+        int b = 10;
+        System.out.println(c == d);
         System.out.println(a == c);
         System.out.println(c == b);
         System.out.println(a == b);
