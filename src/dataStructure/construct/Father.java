@@ -20,15 +20,29 @@ public class Father {
 
     }
 
+//    父静态代码块
+//    子静态代码块
+//    父构造代码块
+//    父构造方法
+//    子构造代码块
+//    子构造方法
+//    父构造代码块
+//    父构造方法
+//    子构造代码块
+//    子构造方法
+//    父构造代码块
+//    父构造方法
+//    子构造代码块
+//    子构造方法
     public static void main(String[] args) {
         //静态只会执行一次，在首次加载进内存时候就执行了
-//        Son son = new Son(2);
-//        Son son1 = new Son(3);
-        Father father=new Son(4);
-        System.out.println(father.a);
+        Son son = new Son();
+        Son son1 = new Son();
+        Father father=new Son();
+//        System.out.println(father.a);
 //        father.method1();
 //        son1.method();
 //        System.out.println(son1.a);
-        father.method();
+//        father.method();
     }
 }
