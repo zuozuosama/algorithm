@@ -1,6 +1,9 @@
 package leetcode;
 
-public class MaxProfit {
+/**
+ * 动态规划算法 一次买入卖出股票
+ */
+public class MaxProfitI {
     public int maxProfit(int[] prices) {
         if (prices.length == 0) return 0;
         int curMin = prices[0];
