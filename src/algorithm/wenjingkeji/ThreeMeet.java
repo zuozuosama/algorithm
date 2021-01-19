@@ -1,9 +1,8 @@
 package algorithm.wenjingkeji;
 
 
-
 /**
- *  给定一个数组,类似【8,13,-50,1,16,0,-33,180,-380,11】
+ * 给定一个数组,类似【8,13,-50,1,16,0,-33,180,-380,11】
  * 写一个函数,以给定数组作为输入,返回 Max（Sum（sub1）+ Sum（sub2））
  */
 public class ThreeMeet {
@@ -12,6 +11,20 @@ public class ThreeMeet {
         for (int i = 1; i < nums.length; i++) {
             nums[i] += Math.max(nums[i - 1], 0);
             res = Math.max(nums[i], res);
+        }
+        return res;
+    }
+
+    public int maxSubArray1(int[] nums) {
+        int n = nums.length;
+        int[] dp = new int[n];
+        dp[0] = nums[0];
+        for (int i = 1; i < n; i++) {
+            dp[i] = Math.max(nums[i], dp[i - 1] + nums[i]);
+        }
+        int res = dp[0];
+        for (int i = 1; i < n; i++) {
+            res = Math.max(res, dp[i]);
         }
         return res;
     }
