@@ -1,13 +1,10 @@
-package oldAlgorithm.Algorithms;
+package leetcode;
 
-import java.util.LinkedList;
-
-/*
-    中心扩散法求字符串中最长的回文子字符串
+/**
+ * 中心扩散法（双指针法的变形）
  */
-public class Palindrome {
-    public String longestPalindrome(String s) {
-        LinkedList<Integer> integers = new LinkedList<>();
+public class LongestPalindrome {
+    public static String longestPalindrome(String s) {
         if (s == null || s.length() == 0) {
             return "";
         }
@@ -21,7 +18,7 @@ public class Palindrome {
         return res;
     }
 
-    private String palindrome(String s, int l, int r) {
+    private static String palindrome(String s, int l, int r) {
         while (l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)) {
             l--;
             r++;
@@ -30,8 +27,8 @@ public class Palindrome {
     }
 
     public static void main(String[] args) {
-        String str = "babad";
-        String s = new Palindrome().longestPalindrome(str);
-        System.out.println(s);
+        String s = "babad";
+        String res = longestPalindrome(s);
+        System.out.println(res);
     }
 }
