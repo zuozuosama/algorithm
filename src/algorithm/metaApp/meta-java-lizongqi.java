@@ -522,8 +522,8 @@ class MetaJavaQuestionSheet {
                 sb = new StringBuffer().append(string);
             }
         } else if (value instanceof Map) {
-            Map<String, Object> map = (Map<String, Object>) value;
-            for (Map.Entry<String, Object> entry : map.entrySet()) {
+            Map<?, ?> map = (Map<?, ?>) value;
+            for (Map.Entry<?, ?> entry : map.entrySet()) {
                 String string = sb.toString();
                 sb.append(".").append(entry.getKey());
                 showString(entry.getValue(), sb);
