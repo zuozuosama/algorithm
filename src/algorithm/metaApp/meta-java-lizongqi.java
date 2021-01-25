@@ -450,8 +450,8 @@ class MetaJavaQuestionSheet {
      * <p>
      * 现有一个n*n的二维正整数数组nums，每行元素保证递增，每列元素保证递增，求某正整数x是否存在于该二维数组中，需要尽量优化时间和空间复杂度；
      *
-     * @param int[][] nums
-     * @param int     x 目标数
+     * @param nums
+     * @param x 目标数
      * @return boolean
      */
     public static boolean searchMatrix(int[][] nums, int x) {
@@ -563,7 +563,6 @@ class MetaJavaQuestionSheet {
      * <p>
      * TreeNode类的定义:
      *
-     * @param TreeNode 一颗二叉树
      * @return boolean 是否是对称的
      */
 
