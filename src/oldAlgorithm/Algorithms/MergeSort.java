@@ -6,15 +6,20 @@ import java.util.Arrays;
     归并排序
  */
 public class MergeSort {
-    private static int[] sort(int[] a, int low, int high) {
+
+    public static void sort(int[] a) {
+        int low = 0;
+        int high = a.length - 1;
+        sort(a, low, high);
+    }
+
+    private static void sort(int[] a, int low, int high) {
         int mid = (low + high) / 2;
-        if (low < high) {
-            sort(a, low, mid);
-            sort(a, mid + 1, high);
-            //左右归并
-            merge(a, low, mid, high);
-        }
-        return a;
+        if (low >= high) return;
+        sort(a, low, mid);
+        sort(a, mid + 1, high);
+        //左右归并
+        merge(a, low, mid, high);
     }
 
     private static void merge(int[] a, int low, int mid, int high) {
@@ -50,9 +55,8 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-
-        int[] arr = {21,25,84,47,15,27,68,35,20};
-        sort(arr, 0, arr.length - 1);
+        int[] arr = {21, 25, 84, 47, 15, 27, 68, 35, 20};
+        sort(arr);
         System.out.println(Arrays.toString(arr));
     }
 }

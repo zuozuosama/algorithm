@@ -542,7 +542,6 @@ class MetaJavaQuestionSheet {
         map2.put("b", obj);
         map1.put("a", map2);
         System.out.println(showMap(map1));
-
     }
 
     /**
