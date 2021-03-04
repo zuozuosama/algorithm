@@ -5,11 +5,10 @@ import java.util.*;
 
 public class Case1 {
     /**
-     *
      * @param num_money int整型 奖金的总数,单位为元
      * @return int整型
      */
-    public static int CalulateMethodCount (int num_money) {
+    public static int CalulateMethodCount(int num_money) {
 //        // write code here
 //        if (num_money < 3) return num_money;
 //        int p = 1, q = 2;
@@ -20,7 +19,7 @@ public class Case1 {
 //        }
 //        return q+1;
 
-        if (num_money<1)return 0;
+        if (num_money < 1) return 0;
         if (num_money == 1) {
             return 1;
         }
