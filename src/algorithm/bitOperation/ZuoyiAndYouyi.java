@@ -22,8 +22,8 @@ public class ZuoyiAndYouyi {
     }
 
     @Test
-    public void xx(){
-        int a =2;
+    public void xx() {
+        int a = 2;
         System.out.println(a++ >= 3);
         System.out.println(a);
     }

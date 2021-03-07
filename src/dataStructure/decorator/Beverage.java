@@ -6,6 +6,8 @@ import java.math.BigDecimal;
  * @author fan_rc@suixingpay.com
  * @description 饮料抽象类
  * @date 2019/9/17 20:53
+ *
+ * 模板设计模式
  */
 public abstract class Beverage {
 
