@@ -1,4 +1,4 @@
-package solution.my;
+package leetcode.changkaoti;
 
 /**
  * 给定一个二叉树，找出其最大深度。

@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.changkaoti;
 
 /**
  * 快慢指针

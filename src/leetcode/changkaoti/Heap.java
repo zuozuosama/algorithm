@@ -1,4 +1,4 @@
-package oldAlgorithm.Algorithms;
+package leetcode.changkaoti;
 
 import java.util.Arrays;
 
@@ -17,9 +17,7 @@ public class Heap {
             size--;
             //构造大根堆
             heapify(arr, 0, size);
-
         }
-
     }
 
     //构造大根堆（通过新插入的数上升）
@@ -41,6 +39,7 @@ public class Heap {
             }
         }
     }
+
     //将剩余的数构造成大根堆（通过顶端的数下降）
     public static void heapify(int[] arr, int index, int size) {
         int left = 2 * index + 1;
@@ -71,6 +70,7 @@ public class Heap {
         }
 
     }
+
     //交换数组中两个元素的值
     public static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
@@ -79,7 +79,7 @@ public class Heap {
     }
 
     public static void main(String[] args) {
-        int[] arr = {3,6,8,5,7};
+        int[] arr = {3, 6, 8, 5, 7};
         heapSort(arr);
         System.out.println(Arrays.toString(arr));
     }

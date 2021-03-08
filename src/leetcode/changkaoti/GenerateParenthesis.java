@@ -1,6 +1,7 @@
-package solution.my;
+package leetcode.changkaoti;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * 数字 n 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 有效的 括号组合。
@@ -17,7 +18,7 @@ import java.util.*;
  */
 
 /**
- * DFS(Deep First Search)，深度优先搜索算法，包含剪枝定界法 + 回溯算法
+ * DFS(Deep First Search)回溯算法，深度优先搜索算法，包含剪枝定界法 + 回溯算法
  */
 public class GenerateParenthesis {
     private List<String> res = new LinkedList<>();

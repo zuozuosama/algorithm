@@ -1,4 +1,4 @@
-package oldAlgorithm.Algorithms;
+package leetcode.changkaoti;
 
 import java.util.*;
 

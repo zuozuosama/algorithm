@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.changkaoti;
 
 import java.util.Arrays;
 
