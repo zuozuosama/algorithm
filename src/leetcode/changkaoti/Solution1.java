@@ -11,7 +11,7 @@ class Solution1 {
         char[] ch = str.toCharArray();
         boolean minus = false;
         int index = 0;
-        long res = 0;
+        long res = 0; //如果不是long 而是int 遇到：-912834723 32 输出：-1089159116 错误
         if (ch[0] == '-' || ch[0] == '+' || Character.isDigit(ch[0])) {
             if (ch[0] == '-' || ch[0] == '+') {
                 if (ch[0] == '-') minus = true;
