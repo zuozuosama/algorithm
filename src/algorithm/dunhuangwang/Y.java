@@ -19,8 +19,8 @@ public class Y {
         x.print();
 
         Integer a = new Integer(10);
-        Integer c = -128;
-        Integer d = -128;
+        Integer c = -129;
+        Integer d = -129;
         int b = 10;
         System.out.println(c == d);
         System.out.println(a == c);
