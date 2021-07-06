@@ -74,6 +74,8 @@ public class LongestSingleSubstring {
         int left = 0;
         for (int i = 0; i < s.length(); i++) {
             if (map.containsKey(s.charAt(i))) {
+                //假如 窗口左边界只是这样更新 left =  map.get(s.charAt(i)) + 1;
+                //abba这种情况有错误
                 left = Math.max(left, map.get(s.charAt(i)) + 1);
             }
             map.put(s.charAt(i), i);
