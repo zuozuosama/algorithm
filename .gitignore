@@ -27,3 +27,4 @@ src/main/resources/generator/*
 out/
 
 /.idea/
+out
