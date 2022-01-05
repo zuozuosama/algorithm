@@ -46,56 +46,27 @@ public class P54SpiralMatrix {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public List<Integer> spiralOrder(int[][] matrix) {
-            int n = matrix.length;
-            int m = matrix[0].length;
             List<Integer> res = new LinkedList<>();
-
-            if (m == 1) {
-                for (int i = 0; i < n; i++) {
-                    res.add(matrix[i][0]);
+            if (matrix == null || matrix.length == 0 || matrix[0].length == 0) return res;
+            int rows = matrix.length;
+            int columns = matrix[0].length;
+            int row = 0, column = 0;
+            int total = rows * columns;
+            boolean[][] visit = new boolean[rows][columns];
+            int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+            int direction = 0;
+            for (int i = 0; i < total; i++) {
+                res.add(matrix[row][column]);
+                visit[row][column] = true;
+                int nextRow = row + directions[direction][0];
+                int nextColumn = column + directions[direction][1];
+                if (nextRow < 0 || nextRow >= rows || nextColumn < 0 || nextColumn >= columns || visit[nextRow][nextColumn]) {
+                    direction = (direction + 1) % 4;
                 }
-                return res;
-            }
-
-            int startX = 0;
-            int startY = 0;
-            int mid = n / 2;
-            int loop = n / 2;
-            int offset = 1;
-            while (loop > 0) {
-                int i = startX;
-                int j = startY;
-                for (; j < m - offset; j++) {
-                    res.add(matrix[i][j]);
-                }
-                for (; i < n - offset; i++) {
-                    res.add(matrix[i][j]);
-                }
-                for (; j > startY; j--) {
-                    res.add(matrix[i][j]);
-                }
-                for (; i > startX; i--) {
-                    res.add(matrix[i][j]);
-                }
-                startX++;
-                startY++;
-                loop--;
-                offset++;
-            }
-
-            if (n % 2 == 1) {
-                if (n != m) {
-                    int j = startY;
-                    for (; j < m - offset; j++) {
-                        res.add(matrix[startX][j]);
-                    }
-                    res.add(matrix[startX][j]);
-                } else {
-                    res.add(matrix[mid][mid]);
-                }
+                row = row + directions[direction][0];
+                column = column + directions[direction][1];
 
             }
-
             return res;
         }
     }
