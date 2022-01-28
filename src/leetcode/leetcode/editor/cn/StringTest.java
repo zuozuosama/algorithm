@@ -1,5 +1,8 @@
 package leetcode.leetcode.editor.cn;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * @ClassName StringTest
  * @Description TODO
@@ -22,7 +25,7 @@ public class StringTest {
     public static void c() {
         StringBuilder a = new StringBuilder("1");
         StringBuilder b = new StringBuilder("2");
-        d(a, b);
+        e(a, b);
         System.out.println(a.toString());
         System.out.println(b.toString());
     }
@@ -32,8 +35,28 @@ public class StringTest {
         b = a;
     }
 
+    public static void e(StringBuilder a, StringBuilder b) {
+        a = b;
+    }
+
+    public static void f(List<Integer> a, List<Integer> b) {
+        a = b;
+    }
+
+    public static void g() {
+        LinkedList<Integer> a = new LinkedList<>();
+        LinkedList<Integer> b = new LinkedList<>();
+        a.add(1);
+        b.add(2);
+        f(a, b);
+        System.out.println(a);
+        System.out.println(b);
+    }
+
+
     public static void main(String[] args) {
         // a();
-        c();
+        // c();
+        g();
     }
 }
