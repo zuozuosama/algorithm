@@ -57,19 +57,59 @@ package leetcode.leetcode.editor.cn;
 // 
 // Related Topics 字符串 回溯
 
-public class P93RestoreIpAddresses{
+import java.util.LinkedList;
+import java.util.List;
+
+public class P93RestoreIpAddresses {
     public static void main(String[] args) {
         Solution solution = new P93RestoreIpAddresses().new Solution();
         // TO TEST
+        List<String> list = solution.restoreIpAddresses("25525511135");
+        System.out.println(list);
     }
-    
 
-//leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public List<String> restoreIpAddresses(String s) {
 
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        private List<String> result = new LinkedList<>();
+
+        public List<String> restoreIpAddresses(String s) {
+            backTrace(s, 0, 0);
+            return result;
+        }
+
+        private void backTrace(String s, int startIndex, int pointNum) {
+            if (pointNum == 3) {
+                if (isvalid(s, startIndex, s.length() - 1)) {
+                    result.add(s);
+                }
+                return;
+            }
+            for (int i = startIndex; i < s.length(); i++) {
+                if (isvalid(s, startIndex, i)) {
+                    s = s.substring(0, i + 1) + "." + s.substring(i + 1);
+                    pointNum++;
+                    backTrace(s, i + 2, pointNum);
+                    pointNum--;
+                    s = s.substring(0, i + 1) + s.substring(i + 2);
+                } else {
+                    break;
+                }
+            }
+        }
+
+        private boolean isvalid(String s, int start, int end) {
+            if (start > end) return false;
+            if (s.charAt(start) == '0' && start != end) return false;
+            int num = 0;
+            for (int i = start; i <= end; i++) {
+                char c = s.charAt(i);
+                num = num * 10 + (c - '0');
+                if (num > 255 || num < 0) return false;
+            }
+            return true;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }
