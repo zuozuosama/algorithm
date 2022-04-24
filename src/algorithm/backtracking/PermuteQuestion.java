@@ -17,7 +17,7 @@ public class PermuteQuestion {
 
     private void backtrace(int[] nums, LinkedList<Integer> track) {
         if (track.size() == nums.length) {
-            res.add(track);
+            res.add(new LinkedList<>(track));
             return;
         }
         for (int i = 0; i < nums.length; i++) {

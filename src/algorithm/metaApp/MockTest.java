@@ -2,7 +2,7 @@ package algorithm.metaApp;
 
 import java.util.*;
 
-import static org.mockito.Mockito.mock;
+//import static org.mockito.Mockito.mock;
 
 public class MockTest {
     public static void main(String[] args) {
